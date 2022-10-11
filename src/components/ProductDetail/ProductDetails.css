@@ -1,0 +1,52 @@
+.background_products{
+  background: #161925;
+}
+
+.product {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background: #FDFFFC;
+}
+
+.product_details {
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product_details button {
+  bottom: 0px;
+  height: 10vh;
+}
+
+.product_details h3 {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+}
+
+.product_details p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* ===================================MOBILE QUERRIE========================================= */
+@media screen and (max-width: 600px) {
+  .product_details p {
+    display: none;
+  }
+  .product {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .product_details {
+    height: 50vh;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

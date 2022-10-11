@@ -1,0 +1,19 @@
+nav {
+  height: 20vh;
+  display: flex;
+  gap: 2rem;
+  background: #9c9c9c;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* ===================================MOBILE QUERRIE========================================= */
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 250px;
+    height: 100vh;
+  }
+}
