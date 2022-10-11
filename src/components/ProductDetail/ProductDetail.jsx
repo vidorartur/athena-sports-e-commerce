@@ -51,20 +51,6 @@ function ProductDetail() {
       <h3 id={Math.abs(parseFloat(productDetails.price * 0.0069)).toFixed(2)}>
         {`$${Math.abs(parseFloat(productDetails.price * 0.0069)).toFixed(2)}`}
       </h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Vitae repudiandae totam ad porro incidunt quasi distinctio dolores dicta
-        doloremque enim quisquam nisi voluptatum facilis vel facere nostrum,
-        tempore laboriosam ex!
-        quisquam nisi voluptatum facilis vel facere nostrum,
-        tempore laboriosam ex
-        doloremque enim quisquam nisi voluptatum facilis vel facere nostrum,
-        tempore laboriosam ex!
-        quisquam nisi voluptatum facilis vel facere nostrum,
-        tempore laboriosam ex
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-      </p>
       <button
         type="button"
         onClick={(e) => handleClick(e)}
