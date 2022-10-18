@@ -2,7 +2,7 @@
   width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: repeat(4, 25%);
 }
 
 .product__container {
