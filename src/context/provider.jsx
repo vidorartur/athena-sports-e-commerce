@@ -52,7 +52,8 @@ function Provider({ children }) {
 }
 
 Provider.propTypes = {
-  children: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any.isRequired,
 };
 
 export default Provider;

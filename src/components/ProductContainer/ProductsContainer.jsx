@@ -10,7 +10,6 @@ function ProductsContainer() {
   } = useContext(Context);
 
   const history = useHistory();
-
   const handleClick = ({ target }) => {
     const img = target.parentNode.firstChild.name;
     const title = target.parentNode.firstChild.nextSibling.firstChild.id;
@@ -40,11 +39,12 @@ function ProductsContainer() {
   return (
     <div className="products__container">
       { loading === true
-        ? results.results.map((item) => (
+        ? results.map((item) => (
           <Card
             style={{ width: "18rem" }}
             key={item.id}
             className="product__container"
+            data-testid="product__container"
             id={item.id}
           >
             <Card.Img variant="top" src={item.thumbnail} alt={item.title} name={item.thumbnail} />
@@ -59,11 +59,11 @@ function ProductsContainer() {
               onClick={() => history.push(`/product/${item.id}`)}
               id={item.id}
               className="btn-primary"
+              data-testid="product__container_details_button"
             >
               Details
-
             </button>
-            <button type="button" onClick={(e) => handleClick(e)} id={item.id} className="btn-primary">Add to Cart</button>
+            <button type="button" data-testid="product__container_cart_button" onClick={(e) => handleClick(e)} id={item.id} className="btn-primary">Add to Cart</button>
           </Card>
         ))
         : <div>Loading</div>}

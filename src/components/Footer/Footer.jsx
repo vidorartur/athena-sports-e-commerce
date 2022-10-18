@@ -17,6 +17,7 @@ function Footer() {
         </a>
         {" "}
         and
+
         {" "}
         <a href="https://api.mercadolibre.com/items/" target="_blanck">
           https://api.mercadolibre.com/items/

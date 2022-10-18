@@ -12,7 +12,7 @@ import imgMountaineering from "../../Images/mountaineering.jpg";
 function Hero() {
   const { imgHero } = useContext(Context);
 
-  const imgHeroChanger = () => {
+  function imgHeroChanger() {
     switch (imgHero) {
       case "football":
         return imgFootball;
@@ -29,12 +29,12 @@ function Hero() {
       case "mountaineering":
         return imgMountaineering;
       default:
-        return "";
+        return "football";
     }
-  };
+  }
   return (
     <div id="hero">
-      <img src={imgHeroChanger()} alt="football" className="img__hero" />
+      <img src={imgHeroChanger()} alt={imgHero} className="img__hero" />
     </div>
   );
 }

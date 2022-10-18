@@ -8,7 +8,7 @@ function MercadoLivreFetch() {
     const requirement = await fetch(url);
     const response = await requirement.json();
     setLoading(true);
-    setResults(response);
+    setResults(response.results);
   };
 
   useEffect(() => {

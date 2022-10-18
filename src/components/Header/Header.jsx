@@ -24,7 +24,7 @@ function Header() {
   }, []);
 
   return (
-    <header className={scroll ? "header header__hidden" : "header"}>
+    <header className={scroll ? "header header__hidden" : "header"} data-testid="header">
       <a href="/"><img src={img} alt="logo" className="logo" /></a>
       <div>
         <h1>Athena Sports</h1>
@@ -33,6 +33,7 @@ function Header() {
         <h5>
           <HiShoppingCart />
           {" "}
+
           Shopping Cart
         </h5>
 

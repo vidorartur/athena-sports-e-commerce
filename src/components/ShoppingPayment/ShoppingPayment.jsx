@@ -19,7 +19,7 @@ function ShoppingPayment(props) {
           </h5>
 
         </button>
-        <p>
+        <p data-testid="total">
           Total:
           <br />
           $
@@ -41,7 +41,7 @@ function ShoppingPayment(props) {
 }
 
 ShoppingPayment.propTypes = {
-  total: PropTypes.number.isRequired,
+  total: PropTypes.arrayOf.isRequired,
 };
 
 export default ShoppingPayment;

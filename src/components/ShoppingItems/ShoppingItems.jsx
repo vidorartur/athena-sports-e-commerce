@@ -44,7 +44,7 @@ function ShoppingItems() {
                 <br />
                 <button type="button" onClick={(e) => handleMinusItem(e.target.id)} id={item.id}> - </button>
               </div>
-              <h5>
+              <h5 data-testid="quantity">
                 Quantity:
                 {" "}
                 {item.quantity}
@@ -55,7 +55,7 @@ function ShoppingItems() {
                 {`$${item.totalValue}`}
               </h5>
             </li>
-          )) : ""}
+          )) : <h1>Cart Empty</h1>}
       </ul>
     </div>
   );
