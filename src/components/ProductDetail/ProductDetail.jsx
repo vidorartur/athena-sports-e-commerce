@@ -47,33 +47,38 @@ function ProductDetail() {
         </h5>
 
       </button>
-      <h3 id={productDetails.title} data-testid="title_product">{productDetails.title}</h3>
-      <h3 id={Math.abs(parseFloat(productDetails.price * 0.0069)).toFixed(2)}>
-        {`$${Math.abs(parseFloat(productDetails.price * 0.0069)).toFixed(2)}`}
-      </h3>
-      <button
-        type="button"
-        onClick={(e) => handleClick(e)}
-        className="btn-primary"
-        id={productDetails.id}
-      >
-        <h5>
-          Add to Cart
-        </h5>
+      <div>
+        <h3 id={productDetails.title} data-testid="title_product">{productDetails.title}</h3>
+        <h3 id={Math.abs(parseFloat(productDetails.price * 0.0069)).toFixed(2)}>
+          {`$${Math.abs(parseFloat(productDetails.price * 0.0069)).toFixed(2)}`}
+        </h3>
+      </div>
+      <div className="button_container">
+        <button
+          type="button"
+          onClick={(e) => handleClick(e)}
+          className="btn-primary"
+          id={productDetails.id}
+        >
+          <h5>
+            Add to Cart
+          </h5>
 
-      </button>
-      <button
-        type="button"
-        onClick={() => { history.push("/shopping-cart"); }}
-        className="btn-primary"
-        id={productDetails.id}
-      >
-        <h5>
-          <HiShoppingCart />
-          {" "}
-          Shopping Cart
-        </h5>
-      </button>
+        </button>
+        <button
+          type="button"
+          onClick={() => { history.push("/shopping-cart"); }}
+          className="btn-primary"
+          id={productDetails.id}
+        >
+          <h5>
+            <HiShoppingCart />
+            {" "}
+            Shopping Cart
+          </h5>
+        </button>
+      </div>
+
     </div>
 
   );

@@ -6,10 +6,12 @@ import "@testing-library/jest-dom/extend-expect";
 import renderWithRouter from "./helper/RenderWithRouter";
 
 describe("Testa o site de compras online, página principal", () => {
-  test("Se o titulo da página e a logo renderizam", () => {
+  test("Se o titulo da página e a logo renderizam", async () => {
     render(<App />);
     const title = screen.getByText("Athena Sports");
     const logo = screen.getByAltText("logo");
+    const shoppingCartButtonDetails = await screen.findByRole("heading", { name: /Shopping Cart/i });
+    expect(shoppingCartButtonDetails).toBeInTheDocument();
     expect(title).toBeInTheDocument();
     expect(logo).toBeInTheDocument();
   });
