@@ -16,6 +16,7 @@ function Footer() {
           https://api.mercadolibre.com/sites/MLA/search?category=
         </a>
         {" "}
+        <br />
         and
 
         {" "}
